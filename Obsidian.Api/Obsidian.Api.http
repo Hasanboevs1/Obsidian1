@@ -1,0 +1,6 @@
+@Obsidian.Api_HostAddress = http://localhost:5226
+
+GET {{Obsidian.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
