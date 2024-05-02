@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Obsidian.Api.Extensions;
 using Obsidian.Data.DbContexts;
 using Obsidian.Service.Mappings;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,6 +22,15 @@ builder.Services.AddDbContext<AppDbContext>(opt =>
 
 builder.Services.AddCustomService();
 builder.Services.AddAutoMapper(typeof(MappingProfile));
+
+// Logging
+var logger = new LoggerConfiguration()
+    .ReadFrom.Configuration(builder.Configuration)
+    .Enrich.FromLogContext()
+    .CreateLogger();
+
+builder.Logging.ClearProviders();
+builder.Logging.AddSerilog(logger);
 
 
 var app = builder.Build();

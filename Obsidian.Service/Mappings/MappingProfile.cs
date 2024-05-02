@@ -11,9 +11,9 @@ public class MappingProfile : Profile
     public MappingProfile()
     {
         // Users
-        CreateMap<User, UserForResultDto>().ReverseMap();
-        CreateMap<User, UserForCreationDto>().ReverseMap();
-        CreateMap<User, UserForUpdateDto>().ReverseMap();
+        CreateMap<Task<User>, UserForResultDto>().ReverseMap();
+        CreateMap<Task<User>, UserForCreationDto>().ReverseMap();
+        CreateMap<Task<User>, UserForUpdateDto>().ReverseMap();
 
         // Posts
 
