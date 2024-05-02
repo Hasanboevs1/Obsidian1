@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Obsidian.Data.DbContexts;
+using Obsidian.Service.Mappings;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,7 +18,6 @@ builder.Services.AddDbContext<AppDbContext>(opt =>
 
 
 builder.Services.AddAutoMapper(typeof(MappingProfile));
-
 
 
 var app = builder.Build();

@@ -6,7 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -21,6 +20,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Obsidian.Data\Obsidian.Data.csproj" />
     <ProjectReference Include="..\Obsidian.Domain\Obsidian.Domain.csproj" />
+    <ProjectReference Include="..\Obsidian.Service\Obsidian.Service.csproj" />
   </ItemGroup>
 
 </Project>
