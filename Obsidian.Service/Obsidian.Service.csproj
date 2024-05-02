@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Obsidian.Data\Obsidian.Data.csproj" />
     <ProjectReference Include="..\Obsidian.Domain\Obsidian.Domain.csproj" />
   </ItemGroup>
 
