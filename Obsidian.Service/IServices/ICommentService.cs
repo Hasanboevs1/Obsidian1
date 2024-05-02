@@ -7,7 +7,7 @@ public interface ICommentService
 {
     public Task<CommentForResultDto> RetrieveByIdAsync(long id);
     public Task<bool> RemoveAsync(long id);
-    public IEnumerable<CommentForResultDto> RetrieveAllAsync();
+    public Task<IEnumerable<CommentForResultDto>> RetrieveAllAsync();
     public Task<CommentForResultDto> CreateAsync(CommentForCreationDto dto);
     public Task<CommentForResultDto> UpdateAsync(CommentForUpdateDto dto);
 }

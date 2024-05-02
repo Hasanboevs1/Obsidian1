@@ -35,7 +35,7 @@ public class Repository<TEntity> : IRepository<TEntity> where TEntity : Auditabl
     }
 
 
-    public IQueryable<TEntity> SelectAll()
+    public IQueryable<TEntity> SelectAllAsync()
         => _dbSet;
 
     public async Task<TEntity> SelectByIdAsync(long id)
