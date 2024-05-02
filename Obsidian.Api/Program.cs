@@ -10,11 +10,15 @@ builder.Services.AddSwaggerGen();
 
 var connection = builder.Configuration.GetConnectionString("obs");
 
-
 builder.Services.AddDbContext<AppDbContext>(opt =>
 {
     opt.UseNpgsql(connection);
 });
+
+
+builder.Services.AddAutoMapper(typeof(MappingProfile));
+
+
 
 var app = builder.Build();
 

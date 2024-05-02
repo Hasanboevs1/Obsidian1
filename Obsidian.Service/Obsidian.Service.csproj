@@ -6,6 +6,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Obsidian.Api\Obsidian.Api.csproj" />
     <ProjectReference Include="..\Obsidian.Data\Obsidian.Data.csproj" />
     <ProjectReference Include="..\Obsidian.Domain\Obsidian.Domain.csproj" />
   </ItemGroup>
